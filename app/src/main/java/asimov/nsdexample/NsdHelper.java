@@ -39,7 +39,7 @@ public class NsdHelper {
 
     public NsdHelper(Context context) {
         mContext = context;
-        mNsdManager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
+        //mNsdManager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
     }
 
     public void initializeNsd() {
@@ -142,10 +142,10 @@ public class NsdHelper {
         };
     }
 
-    public void registerService(int port) {
+    public void registerService(int port, String name) {
         NsdServiceInfo serviceInfo  = new NsdServiceInfo();
         serviceInfo.setPort(port);
-        serviceInfo.setServiceName(mServiceName);
+        serviceInfo.setServiceName(name);
         serviceInfo.setServiceType(SERVICE_TYPE);
         
         mNsdManager.registerService(

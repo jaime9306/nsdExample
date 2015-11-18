@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">nsdExample</string>
+    <string name="title_activity_crear">Crear</string>
 </resources>
